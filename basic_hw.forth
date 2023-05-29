@@ -74,11 +74,13 @@ $02d4 constant LATC
 ;
 
 : but_test
-    do
+    begin
         r_but? right_led
         l_but? left_led
         r_but? 0= l_but? 0= and pwr_led
-    loop
+    key? until 
+    \ get rid of the key
+    key drop
 ;
 
 
