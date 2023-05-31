@@ -66,9 +66,9 @@ $0x0080 constant mCKP
     \ 00 = Primary prescale 64:1
     \ SMP: SPIx Data Input Sample Phase bit Master mode:
     \          0 = Input data sampled at middle of data output time 
-    \ CKE: SPIx Clock Edge Select bit(1) 
+    \ CKE: SPIx Clock Edge Select bit(1)
     \          1 = Serial output data changes on transition from active clock state to Idle clock state (see bit 6) 
-    \ CKP: Clock Polarity Select bit 
+    \ CKP: Clock Polarity Select bit
     \          0 = Idle state for clock is a low level; active state is a high level 
     SPI1CON1 mCKE mset
     SPI1CON1 mCKP mclr
