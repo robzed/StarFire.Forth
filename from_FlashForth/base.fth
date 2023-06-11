@@ -8,11 +8,13 @@
 marker -baseutil
 decimal ram
 
+\ From free.fs
+: unused hi here - 1+ ;
 \ MCU without eeprom
 : .free
   decimal
-  cr ." Flash:" flash hi here - u. ." bytes"
-  cr ." Ram:" ram hi here - u. ." bytes"
+  cr ." Flash:" flash unused u. ." bytes"
+  cr ." Ram:" ram unused u. ." bytes"
 ;
 
 
